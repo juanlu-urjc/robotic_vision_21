@@ -10,7 +10,7 @@ To perform the exercise it is necesary to do:
 1. Pull the latest RADI image from Docker using the following command: docker pull jderobot/robotics-academy
 2. Start the Docker container of the image and keep it running in the background (replace "container_name" with a name of your preference): docker run -it --name=container_name -p 8080:8080 -p 7681:7681 -p 2303:2303 -p 1905:1905 -p 8765:8765 jderobot/robotics-academy
 
-(In case you've already had the container just run docker run "container_name")
+   (In case you've already had the container just run docker run "container_name")
 
 3. Click the connection button and wait until it turns green.
 4. Now you can use the exercise!
