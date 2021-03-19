@@ -18,30 +18,10 @@ docker run -it --name=container_name -p 8080:8080 -p 7681:7681 -p 2303:2303 -p 1
 4. Now you can use the exercise!
 
 
-Then, I program the code using Python language. I use a PD controller and adjust the params to get a loop in 40 seconds.
+Then, I program the code using Python language. I use a **PD controller** and adjust the params to get a loop in 40 seconds. For this solution, it is very important that the **Brain parameter is 30**. Otherwise, the car would be very unstable.
 
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/juanlu-urjc/robotic_vision_21/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+This video shows the operation.
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=tP3CVYRr85c
+" target="_blank"><img src="http://img.youtube.com/vi/tP3CVYRr85c/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="240" border="10" /></a>
