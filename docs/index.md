@@ -20,8 +20,9 @@ docker run -it --name=container_name -p 8080:8080 -p 7681:7681 -p 2303:2303 -p 1
 
 Then, I program the code using Python language. I use a **PD controller** and adjust the params to get a loop in 40 seconds. For this solution, it is very important that the **Brain parameter is 30**. Otherwise, the car would be very unstable.
 
+After many trials to adjust the controller parameters, a lap is completed in just over 30 seconds.
 
-This video shows the operation.
+This video shows the result.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=tP3CVYRr85c
 " target="_blank"><img src="http://img.youtube.com/vi/tP3CVYRr85c/0.jpg" 
