@@ -1,6 +1,7 @@
 ## Welcome to Robotic Vision subject
 
 This blog is about Robotic Vision subject of the Artificial Vision máster of the [Rey Juan Carlos University](http://www.urjc.es) of Madrid. In this website I will be narrating my progress in this subject.
+<P align="right">Juan Luis Carrillo</P>
 
 ### Follow Line exersice of Unibiotics platform 
 
