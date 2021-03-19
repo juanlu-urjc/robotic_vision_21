@@ -14,9 +14,7 @@ To perform the exercise it is necesary to previously do:
 4. Now you can use the exercise!
 
 
-Then, I program the code using Python language. I use a **PD controller** and adjust the params to get a loop in 40 seconds. For this solution, it is very important that the **Brain parameter is 30**. Otherwise, the car would be very unstable.
-
-After many trials to adjust the controller parameters, a lap is completed in just over 30 seconds.
+Then, I program the code using Python language. I use a **PD controller**. After many trials to adjust the controller parameters, a lap is completed in just over 30 seconds. For this solution, it is very important that the **Brain parameter is 30**. Otherwise, the car would be very unstable.
 
 This video shows the result.
 
