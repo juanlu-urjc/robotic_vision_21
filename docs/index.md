@@ -11,8 +11,7 @@ Specifically, the following exercises have been carried out:
 
 In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction) exercise of the Robotics-Academy website will be carried out. Specifically, the 3D scene shown below will be reconstructed.
 
-![Escena en 3D]
-(https://drive.google.com/file/d/1JS89lrKmcDtGCwj8HqQhwkpPesa6YaEm/view?usp=sharing)
+![Escena en 3D](robotic_vision_21/docs/Escena.png)
 
 This scene will be reconstructed from the following images.
 
@@ -28,7 +27,7 @@ To achieve the objective, the following steps have been followed:
 
 The first step has been to apply a Canny filter to the images of the stereo pair, as shown in the following figure.
 
-![Filtro de Canny](https://drive.google.com/file/d/1dkLj6GjVFlDcn0bygPAH32CztUtb93bg/view?usp=sharing)
+![Filtro de Canny](robotic_vision_21/docs/Escena.png)
 
 
 ### <a name="p1" /> Follow Line exersice of Unibiotics platform 
