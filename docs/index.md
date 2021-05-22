@@ -3,6 +3,18 @@
 This blog is about Robotic Vision subject of the Artificial Vision máster of the [Rey Juan Carlos University](http://www.urjc.es) of Madrid. In this website I will be narrating my progress in this subject.
 <P align="right">by Juan Luis Carrillo</P>
 
+### 3D Reconstruction
+
+In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction) exercise of the Robotics-Academy website will be carried out. Specifically, the 3D scene shown below will be reconstructed.
+
+![Escena en 3D](https://github.com/juanlu-urjc/robotic_vision_21/blob/gh-pages/docs/Escena.png)
+
+This scene will be reconstructed from the following images.
+
+![Par estéreo](https://github.com/juanlu-urjc/robotic_vision_21/blob/gh-pages/docs/par_estereo.png)
+
+
+
 ### Follow Line exersice of Unibiotics platform 
 
 The goal of [Follow Line](https://unibotics.org/academy/exercise/follow_line/) exercise is to perform a PID reactive control capable of following the line painted on the racing circuit.
