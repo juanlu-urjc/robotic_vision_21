@@ -15,7 +15,7 @@ In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAca
 
 This scene will be reconstructed from the following images.
 
-![Par estéreo](https://drive.google.com/file/d/17roNKSaw5KJP3lDyU5AyxbACDKZZxeIM/view?usp=sharing)
+![Par estéreo](par_estereo.jpg)
 
 To achieve the objective, the following steps have been followed:
 - Perform a Canny filter
@@ -27,7 +27,7 @@ To achieve the objective, the following steps have been followed:
 
 The first step has been to apply a Canny filter to the images of the stereo pair, as shown in the following figure.
 
-![Filtro de Canny](robotic_vision_21/docs/Escena.png)
+![Filtro de Canny](canny.jpg)
 
 
 ### <a name="p1" /> Follow Line exersice of Unibiotics platform 
