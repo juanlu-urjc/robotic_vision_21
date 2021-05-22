@@ -3,7 +3,11 @@
 This blog is about Robotic Vision subject of the Artificial Vision máster of the [Rey Juan Carlos University](http://www.urjc.es) of Madrid. In this website I will be narrating my progress in this subject.
 <P align="right">by Juan Luis Carrillo</P>
 
-### 3D Reconstruction
+Specifically, the following exercises have been carried out:
+- [Follow Line exersice of Unibiotics platform](#p1)
+- [3D Reconstruction](#p2)
+
+### <a name="p2" />3D Reconstruction
 
 In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction) exercise of the Robotics-Academy website will be carried out. Specifically, the 3D scene shown below will be reconstructed.
 
@@ -13,9 +17,20 @@ This scene will be reconstructed from the following images.
 
 ![Par estéreo](https://github.com/juanlu-urjc/robotic_vision_21/blob/gh-pages/docs/par_estereo.png)
 
+To achieve the objective, the following steps have been followed:
+- Perform a Canny filter
+- Calculate the epipolar line
+- Obtain the homologous points of the two images
+- Calculate 3D point from homologous 2D points
+
+#### Perform a Canny filter
+
+The first step has been to apply a Canny filter to the images of the stereo pair, as shown in the following figure.
+
+![Filtro de Canny](https://github.com/juanlu-urjc/robotic_vision_21/blob/gh-pages/docs/canny.png)
 
 
-### Follow Line exersice of Unibiotics platform 
+### <a name="p1" /> Follow Line exersice of Unibiotics platform 
 
 The goal of [Follow Line](https://unibotics.org/academy/exercise/follow_line/) exercise is to perform a PID reactive control capable of following the line painted on the racing circuit.
 
