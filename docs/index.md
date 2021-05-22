@@ -11,7 +11,7 @@ Specifically, the following exercises have been carried out:
 
 In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction) exercise of the Robotics-Academy website will be carried out. Specifically, the 3D scene shown below will be reconstructed.
 
-![Escena en 3D](./Escena.png)
+![Escena en 3D](./docs/Escena.png)
 
 This scene will be reconstructed from the following images.
 
