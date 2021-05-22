@@ -50,7 +50,7 @@ The following figure shows some homologous points in the stereo pair.
 
 _Calculate 3D point from homologous 2D points_
 
-From the two homologous 2D points and using the simulator API the corresponding 3D points are obtained. With these and the centers of the cameras, the vectors v1 and v2 can be calculated.
+From the two homologous 2D points and using the simulator API, the corresponding 3D points are obtained. With these and the centers of the cameras, the vectors v1 and v2 can be calculated.
 
 ![3D system](system.jpg)
 
