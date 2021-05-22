@@ -1,4 +1,4 @@
-## Welcome to Robotic Vision subject
+# Welcome to Robotic Vision subject
 
 This blog is about Robotic Vision subject of the Artificial Vision máster of the [Rey Juan Carlos University](http://www.urjc.es) of Madrid. In this website I will be narrating my progress in this subject.
 <P align="right">by Juan Luis Carrillo</P>
@@ -7,15 +7,15 @@ Specifically, the following exercises have been carried out:
 - [Follow Line exersice of Unibiotics platform](#p1)
 - [3D Reconstruction](#p2)
 
-### <a name="p2" />3D Reconstruction
+## <a name="p2" />3D Reconstruction
 
 In this practice, the [3D Reconstruction](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction) exercise of the Robotics-Academy website will be carried out. Specifically, the 3D scene shown below will be reconstructed.
 
-![Escena en 3D](Escena.jpg)
+![3D Scene](Escena.jpg)
 
 This scene will be reconstructed from the following images.
 
-![Par estéreo](par_estereo.jpg)
+![Stereo pair](par_estereo.jpg)
 
 To achieve the objective, the following steps have been followed:
 - Perform a Canny filter
@@ -27,10 +27,38 @@ To achieve the objective, the following steps have been followed:
 
 The first step has been to apply a Canny filter to the images of the stereo pair, as shown in the following figure.
 
-![Filtro de Canny](canny.jpg)
+![Canny filter image](canny.jpg)
+
+This filter has a pair of parameters, threshold1 and threshold2. Modifying these parameters can appear more or less edges in the image. The homologous points will be searched on the points that make up the edges of the filtered image with the Canny algorithm.
+
+#### Calculate the epipolar line
+
+Thanks to the simulator API, the point R 'will be obtained from a point of the left camera (see figure). The midpoint, Q', between that point and the center of the camera is then calculated.
+
+![Epipolar line](epipolar_line.jpg)
+
+Projecting these two points on the right camera the points R and Q are obtained. These points allow the calculation of the epipolar line equation.
+
+#### Obtain the homologous points of the two images
+
+Starting from a point of interest in the left image, the homologous point in the right image is searched by traversing the previously calculated epipolar line. To alleviate precision errors, homologous points are also searched on the upper and lower lines parallel to the epipolar line.
 
 
-### <a name="p1" /> Follow Line exersice of Unibiotics platform 
+The following figure shows some homologous points in the stereo pair.
+
+![Homologous](homologos.jpg)
+
+#### Calculate 3D point from homologous 2D points
+
+From the two homologous 2D points and using the simulator API, the corresponding 3D points are obtained. With these and the centers of the cameras, the vectors v1 and v2 can be calculated.
+
+![3D system](system.jpg)
+
+The 3D point can be calculated by solving the following system of equations:
+
+$$c_1$$
+
+## <a name="p1" /> Follow Line exersice of Unibiotics platform 
 
 The goal of [Follow Line](https://unibotics.org/academy/exercise/follow_line/) exercise is to perform a PID reactive control capable of following the line painted on the racing circuit.
 
