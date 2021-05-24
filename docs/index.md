@@ -29,7 +29,7 @@ The first step has been to apply a Canny filter to the images of the stereo pair
 
 ![Canny filter image](canny.jpg)
 
-This filter has a pair of parameters, threshold1 and threshold2. Modifying these parameters can appear more or less edges in the image. The homologous points will be searched on the points that make up the edges of the filtered image with the Canny algorithm.
+This filter has a pair of parameters, **min_th** and **max_th**. Modifying these parameters can appear more or less edges in the image. The homologous points will be searched on the points that make up the edges of the filtered image with the Canny algorithm.
 
 _Calculate the epipolar line_
 
@@ -37,55 +37,59 @@ Thanks to the simulator API, the point R 'will be obtained from a point of the l
 
 ![Epipolar line](epipolar_line.jpg)
 
-Projecting these two points on the right camera the points R and Q are obtained. These points allow the calculation of the epipolar line equation.
+Projecting these two points on the right camera, the points R and Q are obtained. These points allow the calculation of the epipolar line equation.
 
 _Obtain the homologous points of the two images_
 
 Starting from a point of interest in the left image, the homologous point in the right image is searched by traversing the previously calculated epipolar line. To alleviate precision errors, homologous points are also searched on the upper and lower lines parallel to the epipolar line.
 
+Matches have been searched in the HSV color space. Since the two images in the stereo pair have similar illumination, all three channels of the HSV color space have been used. For other applications, it may be desirable to use only the H and S channels.
 
 The following figure shows some homologous points in the stereo pair.
 
 ![Homologous](homologos.jpg)
 
+
+For efficiency reasons, the right camera image is not searched for matches that exceed the "y" coordinate value of the left camera image point of interest.
+
 _Calculate 3D point from homologous 2D points_
 
 From the two homologous 2D points and using the simulator API, the corresponding 3D points are obtained. With these and the centers of the cameras, the vectors v1 and v2 can be calculated, respectively, as follow:
 
-![v1 equation](eq4.svg)
+![v1 equation](eq4_m.svg)
 
-![v2 equation](eq5.svg)
+![v2 equation](eq5_m.svg)
 
 
 ![3D system](system.jpg)
 
 The 3D point can be calculated by solving the following system equations:
 
-![System equation](eq1.svg)
+![System equation](eq1_m.svg)
 
 Where, n vector is:
 
-![n equation](eq2.svg)
+![n equation](eq2_m.svg)
 
 Finally, the 3D point will be
 
-![poin3D equation](eq3.svg)
+![poin3D equation](eq3_n.svg)
 
-
+If the modulus of the vector ***n*** exceeds a maximum value (**max_beta**), the point is ignored because it is assumed to accumulate a lot of error.
 
 __Results__
 
 The following figures show the result of the 3D construction from different points of view.
 
-![Result 1](result_from.jpg)
-![Result 2](result_perps.jpg)
-![Result 3](result_profil.jpg)
+![Result 1](result_from_c.jpg)
+![Result 2](result_perps_c.jpg)
+![Result 3](result_profil_c.jpg)
 
 
 The following video shows the results.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ov239U7xQFY
-" target="_blank"><img src="http://img.youtube.com/vi/Ov239U7xQFY/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=gBHhrDIFka8
+" target="_blank"><img src="http://img.youtube.com/vi/gBHhrDIFka8/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="480" height="240" border="10" /></a>
 
 
